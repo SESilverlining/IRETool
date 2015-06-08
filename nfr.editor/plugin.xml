@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated nfr -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="nfr.presentation.NfrModelWizardID"
+            name="%_UI_NfrModelWizard_label"
+            class="nfr.presentation.NfrModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/NfrModelFile.gif">
+         <description>%_UI_NfrModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated nfr -->
+      <editor
+            id="nfr.presentation.NfrEditorID"
+            name="%_UI_NfrEditor_label"
+            icon="icons/full/obj16/NfrModelFile.gif"
+            extensions="nfr"
+            class="nfr.presentation.NfrEditor"
+            contributorClass="nfr.presentation.NfrActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

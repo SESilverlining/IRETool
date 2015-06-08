@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/nfr/src" modelPluginID="nfr" modelName="Nfr" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>nfr.ecore</foreignModel>
+  <genPackages prefix="Nfr" disposableProviderFactory="true" ecorePackage="nfr.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="nfr.ecore#//SatisficingLabelType">
+      <genEnumLiterals ecoreEnumLiteral="nfr.ecore#//SatisficingLabelType/Undecided"/>
+      <genEnumLiterals ecoreEnumLiteral="nfr.ecore#//SatisficingLabelType/Satisficed"/>
+      <genEnumLiterals ecoreEnumLiteral="nfr.ecore#//SatisficingLabelType/WeaklySatisficed"/>
+      <genEnumLiterals ecoreEnumLiteral="nfr.ecore#//SatisficingLabelType/WeaklyDenied"/>
+      <genEnumLiterals ecoreEnumLiteral="nfr.ecore#//SatisficingLabelType/Denied"/>
+      <genEnumLiterals ecoreEnumLiteral="nfr.ecore#//SatisficingLabelType/Conflict"/>
+    </genEnums>
+    <genClasses ecoreClass="nfr.ecore#//NFRFramework">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nfr.ecore#//NFRFramework/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nfr.ecore#//NFRFramework/softgoalMemebers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nfr.ecore#//NFRFramework/bpmnMembers"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="nfr.ecore#//SoftGoal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nfr.ecore#//SoftGoal/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nfr.ecore#//SoftGoal/goalType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nfr.ecore#//SoftGoal/parents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nfr.ecore#//SoftGoal/child"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nfr.ecore#//SoftGoal/contribTypeToParent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nfr.ecore#//SoftGoal/goalTopic"/>
+    </genClasses>
+    <genClasses ecoreClass="nfr.ecore#//NFRSoftgoal"/>
+    <genClasses ecoreClass="nfr.ecore#//OperationalizingSoftgoal"/>
+    <genClasses ecoreClass="nfr.ecore#//ClaimSoftgoal"/>
+    <genClasses ecoreClass="nfr.ecore#//Contribution">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nfr.ecore#//Contribution/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nfr.ecore#//Contribution/targetSoftgoal"/>
+    </genClasses>
+    <genClasses ecoreClass="nfr.ecore#//Decomposition"/>
+    <genClasses ecoreClass="nfr.ecore#//Satisficing"/>
+    <genClasses ecoreClass="nfr.ecore#//ANDDecomposition"/>
+    <genClasses ecoreClass="nfr.ecore#//ORDecomposition"/>
+    <genClasses ecoreClass="nfr.ecore#//PositiveSatisficing"/>
+    <genClasses ecoreClass="nfr.ecore#//NegativeSatisficing"/>
+    <genClasses ecoreClass="nfr.ecore#//EQLDecomposition"/>
+    <genClasses ecoreClass="nfr.ecore#//Make"/>
+    <genClasses ecoreClass="nfr.ecore#//Help"/>
+    <genClasses ecoreClass="nfr.ecore#//SomePlus"/>
+    <genClasses ecoreClass="nfr.ecore#//Break"/>
+    <genClasses ecoreClass="nfr.ecore#//Hurt"/>
+    <genClasses ecoreClass="nfr.ecore#//SomeMinus"/>
+    <genClasses ecoreClass="nfr.ecore#//GraphcialObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nfr.ecore#//GraphcialObject/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nfr.ecore#//GraphcialObject/softgoal"/>
+    </genClasses>
+    <genClasses ecoreClass="nfr.ecore#//Event"/>
+    <genClasses ecoreClass="nfr.ecore#//Task">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nfr.ecore#//Task/sourceRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nfr.ecore#//Task/targetRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nfr.ecore#//Task/sequenceToTarget"/>
+    </genClasses>
+    <genClasses ecoreClass="nfr.ecore#//FlowSequence">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nfr.ecore#//FlowSequence/sourceTask"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
